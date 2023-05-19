@@ -3,10 +3,6 @@ from tkinter import messagebox
 from random import choice, randint, shuffle
 import json
 
-# ---------------------------- PASSWORD GENERATOR ------------------------------- #
-
-# Password Generator Project
-
 
 def generate_password():
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
@@ -24,9 +20,7 @@ def generate_password():
     password = "".join(password_list)
     password_entry.insert(0, password)
     pyperclip.copy(password)
-
-# ---------------------------- SAVE PASSWORD ------------------------------- #
-
+    
 
 def save():
 
@@ -63,7 +57,6 @@ def save():
             password_entry.delete(0, END)
 
 
-# ---------------------------- FIND PASSWORD ------------------------------- #
 def find_password():
     website = website_entry.get()
     try:
@@ -81,8 +74,6 @@ def find_password():
             messagebox.showinfo(
                 title="Error", message=f"No details for {website} exists.")
 
-
-# ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
 window.title("Password Manager")
